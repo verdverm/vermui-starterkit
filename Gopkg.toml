@@ -1,0 +1,13 @@
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/verdverm/vermui"
+
+[[constraint]]
+  name = "github.com/gdamore/tcell"
+  branch = "master"
+  source = "github.com/verdverm/tcell"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/verdverm/tview"
