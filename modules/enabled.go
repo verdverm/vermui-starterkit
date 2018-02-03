@@ -2,11 +2,13 @@ package modules
 
 import (
 	"github.com/verdverm/tview"
+
+	"github.com/hofstadter-io/connector-go"
+
+	"github.com/verdverm/vermui-starterkit/modules/demos"
 	"github.com/verdverm/vermui-starterkit/modules/help"
 	"github.com/verdverm/vermui-starterkit/modules/home"
 	"github.com/verdverm/vermui-starterkit/modules/root"
-
-	"github.com/hofstadter-io/connector-go"
 )
 
 var (
@@ -24,7 +26,9 @@ func Init() {
 		// routable pages
 		home.New(),
 		help.New(),
+		demos.New(),
 	}
+
 	conn := connector.New("root")
 	conn.Add(items)
 	Module = conn

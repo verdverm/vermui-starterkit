@@ -1,6 +1,8 @@
 package root
 
 import (
+	"fmt"
+
 	"github.com/gdamore/tcell"
 	"github.com/verdverm/tview"
 	"github.com/verdverm/vermui/hoc/cmdbox"
@@ -65,6 +67,7 @@ func (V *RootView) Connect(C connector.Connector) {
 	cmds := C.Get((*Command)(nil))
 	for _, Cmd := range cmds {
 		cmd := Cmd.(Command)
+		fmt.Println("Command: ", cmd.CommandName())
 		V.cbox.AddCommand(cmd)
 	}
 
